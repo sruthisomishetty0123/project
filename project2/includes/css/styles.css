@@ -1,0 +1,158 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  Brad Hussey
+Updated: August 2013
+Notes:	 Hand coded for Udemy.com
+
+*/
+.txt{
+   color: #EE4439;
+}
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+   
+   
+   
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+ #myCarousel{
+   margin-top: 65px;
+   
+ }  
+#myCarousel.item{
+   height: 400px;
+
+}
+.carousel-caption{
+   font-size: 18px;
+}
+#slide1 {
+   background: url('../../images/slide1.jpg') top center no-repeat;
+}
+
+#slide2 {
+   background: url('../../images/slide2.jpg') top center no-repeat;
+}
+
+#slide3 {
+   background: url('../../images/slide4.jpg') top center no-repeat;
+}
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+.foot li{
+   list-style: none;
+}
+.foot 1{
+   align:right;
+}
+footer {
+   background: #333;
+   color: #eee;
+   font-size: 11px;
+   padding: 20px;
+}
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+	
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	
+}
+/*.navimg{
+   width:50px;
+   height:  50px;
+}*/
+#myCarousel .item{
+   height: 500px; 
+}
+@media (max-width: 991px) {
+   .navbar-header {
+       float: none;
+   }
+   .navbar-toggle {
+       display: block;
+   }
+   .navbar-collapse {
+       border-top: 1px solid transparent;
+       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+   }
+   .navbar-collapse.collapse {
+       display: none!important;
+   }
+   .navbar-nav {
+       float: none!important;
+       margin: 7.5px -15px;
+   }
+   .navbar-nav>li {
+       float: none;
+   }
+   .navbar-nav>li>a {
+       padding-top: 10px;
+       padding-bottom: 10px;
+   }
+   .navbar-text {
+       float: none;
+       margin: 15px 0;
+   }
+}
+    
+   .navbar-collapse.collapse.in { 
+       display: block!important;
+   }
+   .collapsing {
+       overflow: hidden!important;
+   }
+}
+
+#home
+{
+   text-decoration-color: red;
+}
+#myCarousel{
+   padding:5px;
+}
+.dropdown-menu{
+background-color: pink;
+}
+#b1{
+   padding: 30px;
+}
+#b2
+{
+   padding: 30px;
+}
+#b3{
+   padding: 30px;
+}
