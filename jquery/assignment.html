@@ -1,0 +1,124 @@
+<html>
+
+<head>
+   <title>search movie</title>
+</head>
+<style>
+#search {
+   margin-top: 100px;
+   width: 250px;
+   height: 40px;
+   margin-left: 60px;
+}
+.table {
+  /*border:"5px solid black"*/;
+  text-align: "center";
+   background-color: "#eee";
+
+  border-collapse: "collapse";
+  
+}
+ tr:nth-child(even) {
+      background-color: #dddddd;
+      
+  }
+
+  
+</style>
+<meta name="description" content="">
+<!-- Mobile viewport optimized -->
+<meta name="viewport" content="width=device-
+
+width, initial-scale=1.0, maximum-scale=1.0, 
+
+user-scalable=no">
+<!-- Bootstrap CSS -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+
+
+<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+<!-- Custom CSS -->
+
+<!-- <link rel="stylesheet" type="text/css" href="../includes/css/styles.css"> -->
+
+
+<body>
+    <div class="contanier">
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+                  
+                    <B><a class="navbar-brand" href="#">MOVIE WORLD</a></B>
+                    
+              
+            </nav>
+</header>    
+    
+   <form>
+        
+       <input type="text" class="form-control-xs-12" id="search" placeholder="search movie..">
+       
+      
+       <button id="btn" class="btn btn-success"><span class="glyphicon glyphicon-search"> </span>Search</button>
+
+   </form>
+  
+     
+   <table class="table" border="5px solid black" cellspacing="2px" cellpadding="3px">
+       <thead>
+           <tr>
+               <th>S.no</th>
+               <th>Movie Name</th>
+               <th>Year</th>
+               <th>IMDB ID</th>
+               <th>Type</th>
+               <th>Poster</th>
+           </tr>
+       </thead>
+   </table>
+   </center>
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+   </script>
+   <script>
+   var title = '';
+   $("#btn").on('click', function(e) {
+       e.preventDefault();
+
+       $.ajax({
+           url: "http://www.omdbapi.com/?s=" + 
+
+$('#search').val(),
+           dataType: 'json',
+           success: function(data) {
+
+               for (var i = 0; i < data.Search.length; i++)
+                {
+                  var a=i+1;
+                    title = data.Search[i].Title;
+                   var year = data.Search[i].Year;
+                   
+                   var imdbID=data.Search[i].imdbID;
+                   var Type=data.Search[i].Type;
+                    //var poster = <img src="data.Search[i].Poster">;              
+                   
+                   
+                  // console.log(data.Search[i].Title);
+                   $('table').append("<tr>+<td>" + a + 
+
+"</td>+<td>" + title + "</td>+<td>" + year +"</td>+<td>" + imdbID + "</td>+<td>" + Type +  "</td>+<td><img src=" +data.Search[i].Poster+"height='64px' width='64px' alt=" +data.Search[i].Title+"></td></tr>");
+
+//tr><td><img src=' + data1[i].Poster + ' alt = ' + data1[i].Title
+
+
+               }
+
+           }
+       });
+   });
+   </script>
+   
+   
+</div>  
+</body>
+
+</html>
